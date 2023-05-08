@@ -5526,13 +5526,12 @@
             footerHeightHendler();
         }));
         function footerHeightHendler() {
-            const footerBottom = document.querySelector(".bottom-footer");
-            const footerBottomHeight = footerBottom.offsetHeight;
-            const footerTop = document.querySelector(".top-footer");
-            footerTop.style.marginBottom = footerBottomHeight + "px";
+            const footerBottomHeight = document.querySelector(".bottom-footer").offsetHeight;
+            const body = document.querySelector("body");
+            body.style.marginBottom = footerBottomHeight + "px";
         }
         aos.init({
-            offset: 300,
+            offset: 200,
             duration: 1e3,
             anchorPlacement: "top-bottom",
             once: true
